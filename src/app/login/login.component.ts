@@ -11,11 +11,10 @@ export class LoginComponent implements OnInit {
     this.user = {
       username:"",
       password:""
-
     }
 
   }
- 
+
   ngOnInit() {
   }
 
