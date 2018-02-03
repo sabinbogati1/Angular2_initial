@@ -8,29 +8,26 @@ import {Routes, RouterModule} from "@angular/router"
 import {AppRoutingModule} from "./appRouting.module"
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
+import {AuthModule} from "./authModule/auth.module";
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
     ForgetPasswordComponent,
     PageNotFoundComponent,
-    DashboardComponent
-   
+
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
