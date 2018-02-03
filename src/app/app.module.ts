@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 import {AuthModule} from "./authModule/auth.module";
 
+import {UsersModule} from "./users/users.module";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {AuthModule} from "./authModule/auth.module";
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    AuthModule
+    AuthModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

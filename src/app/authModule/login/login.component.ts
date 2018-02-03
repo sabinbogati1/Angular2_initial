@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {Router,ActivatedRoute} from "@angular/router"
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   user;
-  constructor() {
+  constructor(
+    private router:Router
+  ) {
     this.user = {
       username:"",
       password:""
@@ -15,7 +18,10 @@ export class LoginComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  login(){
+
+    this.router.navigate(["/user/dashboard"]);
   }
+
 
 }

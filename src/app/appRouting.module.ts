@@ -9,6 +9,10 @@ const RoutesArray: Routes = [
 
         path:"auth",
         loadChildren:"app/authModule/auth.module#AuthModule"
+  },{
+
+    path:"user",
+    loadChildren:"app/users/users.module#UsersModule"
   },
     {
         path: "",

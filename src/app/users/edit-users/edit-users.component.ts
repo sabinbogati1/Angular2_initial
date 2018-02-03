@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router, ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-edit-users',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditUsersComponent implements OnInit {
 
-  constructor() { }
+  routeParams;
+  constructor(
+    private router: Router,
+    private activateRoute:ActivatedRoute
+  ) { }
 
   ngOnInit() {
+
+    this.routeParams= this.activateRoute.snapshot.params["id"];
+    console.log("Route params is: ", this.routeParams);
   }
 
 }
