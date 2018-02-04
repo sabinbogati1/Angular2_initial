@@ -7,19 +7,27 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import {AuthRoutingModule} from "./auth.routing";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
 
+//importing service
+import {AuthService} from "./services/auth.service";
 
 @NgModule({
   imports: [
     CommonModule,
     AuthRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   declarations: [
     LoginComponent,
      RegisterComponent,
      ForgotPasswordComponent,
       ResetPasswordComponent,
-      PageNotFoundComponent]
+      PageNotFoundComponent],
+
+      providers:[
+        AuthService
+      ]
 })
 export class AuthModule { }
